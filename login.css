@@ -1,0 +1,368 @@
+.login-page {
+    min-height: 100vh;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+}
+
+.back-link {
+    position: fixed;
+    top: 2.4rem;
+    left: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #666;
+    text-decoration: none;
+    font-size: 1.08rem;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--color-orange);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 540px;
+    margin: 2.4rem 0;
+}
+
+.login-box {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.login-header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 1.08rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.8rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    background: #f8f8f8;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    color: #333;
+}
+
+.form-group select {
+    padding-right: 3rem;
+    background: #f8f8f8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 1.2rem center;
+    background-size: 1.2rem;
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: var(--color-orange);
+    background-color: var(--color-white);
+}
+
+.form-group select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.form-group select::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.form-group select::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.form-group select[size]:not([size="1"]) {
+    height: auto;
+    overflow-y: auto;
+}
+
+.form-group select option {
+    padding: 0.9rem 1.2rem;
+    background: var(--color-white);
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.form-group select option:hover,
+.form-group select option:focus {
+    background-color: var(--color-orange);
+}
+
+.form-group label {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
+    font-size: 1.2rem;
+    background: transparent;
+}
+
+.form-group input:focus,
+.form-group input:valid,
+.form-group select:focus,
+.form-group select:valid {
+    border-color: var(--color-orange);
+    background: var(--color-white);
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group select:focus + label,
+.form-group select:valid + label {
+    top: 0;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    padding: 0 0.4rem;
+    background: var(--color-white);
+    color: var(--color-orange);
+}
+
+.form-group select:focus + label {
+    color: var(--color-orange);
+}
+
+.form-group.error input,
+.form-group.error select {
+    border-color: #ff4444;
+}
+
+.form-group.error label {
+    color: #ff4444;
+}
+
+.status-label,
+.status-options,
+.status-option,
+.status-jo,
+.status-contractual,
+.status-permanent,
+.status-option.selected,
+.status-options.error {
+    display: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.4rem 0;
+    font-size: 1.08rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    accent-color: var(--color-orange);
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.forgot-link {
+    color: var(--color-pink);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.forgot-link:hover {
+    opacity: 0.8;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1.05rem;
+    background: var(--color-orange);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    margin-bottom: 1.8rem;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.register-link {
+    text-align: center;
+    color: #666;
+    font-size: 1.08rem;
+}
+
+.register-link a {
+    color: var(--color-pink);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.form-message {
+    background: rgba(var(--color-orange-rgb), 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(var(--color-orange-rgb), 0.2);
+}
+
+.login-specific .form-message {
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.864rem;
+}
+
+.form-message p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Login-specific styles (20% smaller) */
+.login-specific .login-container {
+    max-width: 432px;
+}
+
+.login-specific .login-box {
+    padding: 2.4rem;
+    border-radius: 11px;
+}
+
+.login-specific .login-header {
+    margin-bottom: 2.4rem;
+}
+
+.login-specific .login-header h1 {
+    font-size: 1.92rem;
+    margin-bottom: 0.48rem;
+}
+
+.login-specific .login-header p {
+    font-size: 0.864rem;
+}
+
+.login-specific .form-group {
+    margin-bottom: 1.44rem;
+}
+
+.login-specific .form-group input {
+    padding: 0.72rem 0.96rem;
+    border-radius: 8px;
+    font-size: 0.96rem;
+}
+
+.login-specific .form-group label {
+    left: 0.96rem;
+    font-size: 0.96rem;
+}
+
+.login-specific .form-options {
+    margin: 1.92rem 0;
+    font-size: 0.864rem;
+}
+
+.login-specific .remember-me {
+    gap: 0.48rem;
+}
+
+.login-specific .remember-me input[type="checkbox"] {
+    width: 0.96rem;
+    height: 0.96rem;
+}
+
+.login-specific .submit-btn {
+    padding: 0.84rem;
+    border-radius: 8px;
+    font-size: 0.96rem;
+    margin-bottom: 1.44rem;
+}
+
+.login-specific .register-link {
+    font-size: 0.864rem;
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-orange: #ff9f1c;
+    --color-orange-rgb: 255, 159, 28;
+    --color-pink: #e71d36;
+    --color-pink-rgb: 231, 29, 54;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 2.4rem 1.8rem;
+        border-radius: 10px;
+    }
+
+    .back-link {
+        top: 1.2rem;
+        left: 1.2rem;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .login-specific .login-box {
+        padding: 1.92rem 1.44rem;
+        border-radius: 8px;
+    }
+}
